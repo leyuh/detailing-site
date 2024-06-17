@@ -2,32 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+.nav-div > a {
+  @apply transition-all text-base text-center duration-300 w-32;
+}
+.nav-div > a:hover {
+  @apply text-black;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.nav-logo {
+  @apply transition-all duration-300;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.nav-logo:hover {
+  @apply brightness-0;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.hoverPrimary:hover {
+  @apply bg-zinc-50 border-zinc-50 text-black;
 }
