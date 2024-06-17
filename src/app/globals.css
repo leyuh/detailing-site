@@ -2,9 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply bg-primary overflow-x-hidden;
+}
 
 .nav-div > a {
-  @apply transition-all text-base text-center duration-300 w-32;
+  @apply transition-all text-lg text-center duration-300 w-32;
 }
 .nav-div > a:hover {
   @apply text-black;
@@ -19,5 +22,13 @@
 }
 
 .hoverPrimary:hover {
-  @apply bg-zinc-50 border-zinc-50 text-black;
+  @apply bg-zinc-50 border-zinc-50 text-black bg-none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.primary-gradient {
+  @apply bg-gradient-to-br from-primary to-primary2 transition-all;
 }
