@@ -102,7 +102,7 @@ export default function Home() {
               <h1 className="font-[200] text-2xl text-center">*</h1>
           </span>
           
-          <div className="grid grid-cols-4 max-w-sm sm:max-w-lg md:max-w-3xl mx-auto">
+          <div className="grid grid-cols-4 max-w-sm sm:max-w-lg md:max-w-3xl xl:max-w-5xl mx-auto">
               {PRICING_DATA.map((row, r) => (
                   <Fragment key={r}>
                       {row.map((item, i) => (
