@@ -28,6 +28,45 @@ const PORTFOLIO_ITEMS = [
                 after: "/dummyImage.png"
             },
         ]
+    },
+    {
+        model: "Ford F-350",
+        images: [
+            {
+                before: "/dummyImage.png",
+                after: "/dummyImage.png"
+            },
+            {
+                before: "/dummyImage.png",
+                after: "/dummyImage.png"
+            },
+        ]
+    },
+    {
+        model: "Ford F-350",
+        images: [
+            {
+                before: "/dummyImage.png",
+                after: "/dummyImage.png"
+            },
+            {
+                before: "/dummyImage.png",
+                after: "/dummyImage.png"
+            },
+        ]
+    },
+    {
+        model: "Ford F-350",
+        images: [
+            {
+                before: "/dummyImage.png",
+                after: "/dummyImage.png"
+            },
+            {
+                before: "/dummyImage.png",
+                after: "/dummyImage.png"
+            },
+        ]
     }
 ]
 

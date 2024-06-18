@@ -17,8 +17,8 @@ export default function PortfolioItem ({ item, scroll=true }) {
                 <Left dimensions="size-6" />
             </button>}
 
-            <div className="flex flex-row items-center justify-center w-full relative">
-                <h1 className="absolute z-50 text-zinc-50 text-left top-0 left-0 px-2 bg-black bg-opacity-50 w-full">{item.model}</h1>
+            <div className="flex flex-row items-center justify-center w-full relative rounded-sm overflow-hidden shadow-md">
+                <h1 className="absolute z-30 text-zinc-50 text-left top-0 left-0 px-2 bg-black bg-opacity-50 w-full">{item.model}</h1>
                 {Object.keys(item.images[currIndex]).map((label, i) => (
                     <div className="aspect-square w-full relative" key={i}>
                         <h1 className="absolute z-30 text-zinc-50 mb-1 ml-2 bottom-0">{label.toUpperCase()}</h1>

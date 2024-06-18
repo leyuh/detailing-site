@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 body {
-  @apply bg-primary overflow-x-hidden;
+  @apply bg-primary overflow-x-hidden overflow-y-scroll;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .nav-div > a {
@@ -31,4 +35,8 @@ body {
 
 .primary-gradient {
   @apply bg-gradient-to-br from-primary to-primary2 transition-all;
+}
+
+.hover:hover {
+  cursor: pointer;
 }

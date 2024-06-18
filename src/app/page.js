@@ -1,6 +1,6 @@
 import Image from "next/image";
 import CallToAction from "@/components/CallToAction";
-import PRICING_DATA from "@/app/pricingModule"
+import PRICING_DATA from "@/pricingModule"
 import { Fragment } from "react"
 import PORTFOLIO_ITEMS from "@/portfolioModule";
 import PortfolioItem from "@/components/PortfolioItem";
@@ -8,9 +8,9 @@ import PortfolioItem from "@/components/PortfolioItem";
 export default function Home() {
   return (
     <main>
-      <div className="hero w-full h-[90vh] relative top-0 flex items-center">
+      <div className="hero w-full h-[100vh] relative top-0 flex items-center">
 
-        <div className="w-full h-[90vh] absolute">
+        <div className="w-full h-[100vh] absolute">
           <Image 
             src="/dummyHeroImage.jpeg"
             alt="interior"
@@ -22,7 +22,7 @@ export default function Home() {
 
         <div className="info-box text-zinc-50 z-20 relative mx-auto md:mx-0 max-w-sm md:max-w-xl p-2 md:ml-6">
           <h1 className="text-3xl text-center md:text-left md:text-5xl mb-4 font-[300]">Quality, thorough interior detailing for all vehicles.</h1>
-          <div className="flex flex-col md:flex-row gap-x-4 gap-y-2 mx-auto md:mx-0 items-center justify-center md:justify-left w-min">
+          <div className="flex flex-col md:flex-row gap-x-4 gap-y-3 mx-auto md:mx-0 items-center justify-center md:justify-left w-min">
             <CallToAction 
               text="PORTFOLIO"
               destination="/portfolio"
@@ -67,7 +67,7 @@ export default function Home() {
         <h1 className="font-[300] text-4xl pt-12 z-20 items-center mb-2 text-zinc-50 text-center">MY WORK</h1>
         <div className="relative no-scrollbar flex gap-4 w-[calc(100vw-32px)] m-4 overflow-x-scroll">
           {PORTFOLIO_ITEMS.filter((item, i) => i < 6).map((item, i) => (
-            <div className="flex flex-row items-center w-[320px] md:w-[480px] relative shrink-0 grow-0">
+            <div className="flex flex-row items-center w-[320px] md:w-[480px] relative shrink-0 grow-0 rounded-sm overflow-hidden shadow-md">
               {Object.keys(item.images[0]).map((label, i) => (
                   <div className="aspect-square w-full relative" key={i}>
                       <h1 className="absolute z-30 text-zinc-50 mb-1 ml-2 bottom-0">{label.toUpperCase()}</h1>
@@ -96,7 +96,7 @@ export default function Home() {
 
       <div className="pricing w-full relative top-0 bg-zinc-900">
         <div className="bg-primary absolute h-full w-[40%] lg:w-[30%] z-20" />
-        <div className="w-full md:p-2 text-zinc-50 z-40 relative">
+        <div className="w-full md:p-2 text-zinc-50 z-30 relative">
           <span className="text-center z-20 items-start justify-center gap-1 mb-6 pt-12 flex">
               <h1 className="font-[300] text-4xl text-center">PRICING</h1>
               <h1 className="font-[200] text-2xl text-center">*</h1>
