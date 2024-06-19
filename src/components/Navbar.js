@@ -42,8 +42,8 @@ export default function Navbar () {
             )}
         </button>
 
-        <div className={`w-[80vw] transition-all h-full z-40 text-zinc-50 shadow-xl p-4 text-xl font-white fixed ${showMobileNav ? "right-[-80vw]" : "right-0"} md:hidden bg-primary rounded-l-sm`}>
-            <nav className="flex flex-col gap-6 font-[400] mt-[80%]">
+        <div className={`w-[80vw] transition-all h-full z-40 text-zinc-50 shadow-xl p-6 text-2xl font-white fixed ${showMobileNav ? "right-[-80vw]" : "right-0"} md:hidden bg-primary rounded-l-sm`}>
+            <nav className="flex flex-col gap-8 font-[400] mt-[80%]">
                 <NavBtn 
                     destination="/"
                     text="HOME"
@@ -59,7 +59,7 @@ export default function Navbar () {
             </nav>
         </div>
 
-        <div className="hidden md:flex flex-row justify-between pl-4 pr-8 h-16 bg-primary items-center text-zinc-50">
+        <div className="hidden md:flex flex-row justify-between pl-4 pr-8 h-16 z-50 bg-primary items-center text-zinc-50">
             <div className="items-center relative h-24 w-24">
                 <Link href="/">
                     <Image 

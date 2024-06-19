@@ -2,7 +2,7 @@ import Link from "next/link"
 export default function CallToAction ({ text, destination, classes }) {
     return <Link
         href={destination}
-        className={`call-to-action-btn border-2 duration-300 w-[240px] transition-all rounded-sm text-center text-lg px-12 py-1 hoverPrimary ${classes}`}
+        className={`call-to-action-btn border-2 duration-300 w-[260px] transition-all rounded-sm text-center text-xl px-8 py-2 hoverPrimary ${classes}`}
     >
         {text}
     </Link>

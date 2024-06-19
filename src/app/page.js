@@ -4,24 +4,25 @@ import PRICING_DATA from "@/pricingModule"
 import { Fragment } from "react"
 import PORTFOLIO_ITEMS from "@/portfolioModule";
 import PortfolioItem from "@/components/PortfolioItem";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main>
-      <div className="hero w-full h-[100vh] relative top-0 flex items-center">
+    <>
+      <div className="hero w-full h-[100vh] md:h-[calc(100vh-64px)] top-0 relative flex items-center">
 
-        <div className="w-full h-[100vh] absolute">
+        <div className="w-full h-full absolute overflow-hidden z-10">
           <Image 
             src="/dummyHeroImage.jpeg"
             alt="interior"
             fill={true}
             quality="100"
-            className="brightness-50 contrast-125 object-cover"
+            className="brightness-50 contrast-125 object-cover z-10"
           />
         </div>
 
-        <div className="info-box text-zinc-50 z-20 relative mx-auto md:mx-0 max-w-sm md:max-w-xl p-2 md:ml-6">
-          <h1 className="text-3xl text-center md:text-left md:text-5xl mb-4 font-[300]">Quality, thorough interior detailing for all vehicles.</h1>
+        <div className="info-box text-zinc-50 z-20 mt-0 lg:mt-8 relative mx-auto md:mx-0 max-w-sm sm:max-w-md md:max-w-2xl p-2 md:ml-6">
+          <h1 className="text-4xl sm:text-4xl text-center md:text-left md:text-6xl mb-4 font-[300]">Quality, thorough interior detailing for all vehicles.</h1>
           <div className="flex flex-col md:flex-row gap-x-4 gap-y-3 mx-auto md:mx-0 items-center justify-center md:justify-left w-min">
             <CallToAction 
               text="PORTFOLIO"
@@ -38,21 +39,21 @@ export default function Home() {
 
       </div>
 
-      <div className="about w-full relative top-0 bg-zinc-900">
+      <div className="about w-full relative top-0 bg-zinc-900 min-h-[50vh]">
         <div className="bg-primary absolute h-full w-[40%] lg:w-[30%] right-0 z-20" />
 
-        <div className="flex flex-row w-full h-full z-30 relative px-4 py-6">
-          <div className="relative w-full md:w-[50%] flex justify-center items-center">
+        <div className="flex flex-row w-full h-full z-30 relative px-8 sm:px-12 py-6 gap-8 2xl:gap-16 lg:px-24 xl:px-40">
+          <div className="relative w-full md:w-[50%] flex justify-center items-center my-[10%]">
 
               <div className="w-full p-2 my-20 text-zinc-50">
                 <h1 className="font-[300] text-4xl text-left z-20 items-center mb-2">ABOUT</h1>
-                <p className="text-base">It wouldn't be wrong to say I'm a bit of a perfectionist. I won't stop until I know the job is done to the fullest. So, when I detail your vehicle, you can be sure that you are getting your money's worth, and beyond.</p>
+                <p className="text-lg">It wouldn't be wrong to say I'm a bit of a perfectionist. I won't stop until I know the job is done to the fullest. So, when I detail your vehicle, you can be sure that you are getting your money's worth, and beyond.</p>
               </div>
 
         
 
           </div>
-          <div className="hidden md:flex relative w-[50%] p-4 items-center justify-center">
+          <div className="hidden md:flex relative w-[50%] px-2 my-12 items-center justify-center">
               <Image 
               src="/dummyImage.png"
               alt="image"
@@ -97,7 +98,8 @@ export default function Home() {
       <div className="pricing w-full relative top-0 bg-zinc-900">
         <div className="bg-primary absolute h-full w-[40%] lg:w-[30%] z-20" />
         <div className="w-full md:p-2 text-zinc-50 z-30 relative">
-          <span className="text-center z-20 items-start justify-center gap-1 mb-6 pt-12 flex">
+
+          <span className="text-center z-20 items-start justify-center gap-1 mb-6 pt-16 flex">
               <h1 className="font-[300] text-4xl text-center">PRICING</h1>
               <h1 className="font-[200] text-2xl text-center">*</h1>
           </span>
@@ -115,7 +117,7 @@ export default function Home() {
           </div>
 
           <hr className="mt-8 max-w-[80vw] mx-auto"/>
-          <p className="max-w-sm sm:max-w-lg md:max-w-3xl text-center mx-auto mt-2 text-sm px-2 pb-8">* Prices and durations are general estimates and vary based on the vehicle type and condition. Call, text, or email for an accurate estimate on your vehicle.</p>
+          <p className="max-w-sm sm:max-w-lg md:max-w-3xl text-center mx-auto mt-2 text-sm px-2 pb-16">* Prices and durations are general estimates and vary based on the vehicle type and condition. <Link href="/contact" className="underline">Click here</Link> for an accurate estimate on your vehicle.</p>
         </div>
       </div>
 
@@ -123,6 +125,6 @@ export default function Home() {
       <section className="contact">
         
       </section>
-    </main>
+    </>
   );
 }
