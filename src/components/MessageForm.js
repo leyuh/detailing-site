@@ -14,7 +14,7 @@ export default function MessageForm () {
 
     const leatherSeats = useRef();
     const vinylSeats = useRef();
-    const upholsterySeats = useRef();
+    const fabricSeats = useRef();
 
     const badCarpet = useRef();
     const midCarpet = useRef();
@@ -49,7 +49,7 @@ export default function MessageForm () {
                 "user_phone": phoneField.current.value,
                 "user_email": emailField.current.value,
                 "vehicle_model": modelField.current.value,
-                "seat_material": [leatherSeats, vinylSeats, upholsterySeats].filter(ref => ref.current.checked == true)[0].current.value,
+                "seat_material": [leatherSeats, vinylSeats, fabricSeats].filter(ref => ref.current.checked == true)[0].current.value,
                 "carpet_condition": [badCarpet, midCarpet, goodCarpet].filter(ref => ref.current.checked == true)[0].current.value,
                 "method": [textMe, emailMe].filter(ref => ref.current.checked == true)[0].current.value,
                 "message": msgField.current.value
@@ -69,7 +69,7 @@ export default function MessageForm () {
                 
                 leatherSeats.current.checked = false;
                 vinylSeats.current.checked = false;
-                upholsterySeats.current.checked = false;
+                fabricSeats.current.checked = false;
 
                 badCarpet.current.checked = false;
                 midCarpet.current.checked = false;
@@ -148,13 +148,13 @@ export default function MessageForm () {
                 </div>
                 <div className="flex gap-2">
                     <input
-                        ref={upholsterySeats}
+                        ref={fabricSeats}
                         type="radio"
-                        id="upholstery"
+                        id="fabric"
                         name="seat"
-                        value="upholstery"
+                        value="fabric"
                     />
-                    <label htmlFor="upholstery">Upholstery</label>
+                    <label htmlFor="fabric">Fabric</label>
                 </div>
             </fieldset>
 
