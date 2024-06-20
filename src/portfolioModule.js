@@ -9,6 +9,15 @@ const PORTFOLIO_ITEMS = [
         ]
     },
     {
+        model: "2001 BMW 325Ci",
+        images: [
+            {
+                before: "/dummyImage.png",
+                after: "/dummyImage.png"
+            }
+        ]
+    },
+    {
         model: "2020 Ford EcoSport",
         images: [
             {
