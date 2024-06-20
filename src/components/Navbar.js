@@ -59,11 +59,11 @@ export default function Navbar () {
             </nav>
         </div>
 
-        <div className="hidden md:flex flex-row justify-between pl-4 pr-8 h-16 z-50 bg-primary items-center text-zinc-50">
-            <div className="items-center relative h-24 w-24">
+        <div className="hidden md:flex flex-row justify-between pl-4 pr-8 h-20 z-50 bg-primary items-center text-zinc-50">
+            <div className="items-center relative h-28 w-28">
                 <Link href="/">
                     <Image 
-                        src="/dummyLogo.png"
+                        src="/logo-1.png"
                         alt="logo"
                         fill={true}
                         className="object-contain nav-logo"

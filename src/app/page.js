@@ -9,7 +9,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <div className="hero w-full h-[100vh] md:h-[calc(100vh-64px)] top-0 relative flex items-center">
+      <div className="hero w-full h-[100vh] md:h-[calc(100vh-80px)] top-0 relative flex items-center">
 
         <div className="w-full h-full absolute overflow-hidden z-10">
           <Image 

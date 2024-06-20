@@ -1,15 +1,7 @@
 const PORTFOLIO_ITEMS = [
     {
-        model: "Tesla Model 3",
+        model: "Ford F-350",
         images: [
-            {
-                before: "/dummyImage.png",
-                after: "/dummyImage.png"
-            },
-            {
-                before: "/dummyImage.png",
-                after: "/dummyImage.png"
-            },
             {
                 before: "/dummyImage.png",
                 after: "/dummyImage.png"
@@ -17,57 +9,32 @@ const PORTFOLIO_ITEMS = [
         ]
     },
     {
-        model: "Ford F-350",
+        model: "2020 Ford EcoSport",
         images: [
             {
                 before: "/dummyImage.png",
                 after: "/dummyImage.png"
-            },
-            {
-                before: "/dummyImage.png",
-                after: "/dummyImage.png"
-            },
+            }
         ]
     },
     {
-        model: "Ford F-350",
+        model: "Tesla Model 3",
         images: [
             {
                 before: "/dummyImage.png",
                 after: "/dummyImage.png"
-            },
-            {
-                before: "/dummyImage.png",
-                after: "/dummyImage.png"
-            },
+            }
         ]
     },
     {
-        model: "Ford F-350",
+        model: "Ford Bronco Sport",
         images: [
             {
                 before: "/dummyImage.png",
                 after: "/dummyImage.png"
-            },
-            {
-                before: "/dummyImage.png",
-                after: "/dummyImage.png"
-            },
+            }
         ]
     },
-    {
-        model: "Ford F-350",
-        images: [
-            {
-                before: "/dummyImage.png",
-                after: "/dummyImage.png"
-            },
-            {
-                before: "/dummyImage.png",
-                after: "/dummyImage.png"
-            },
-        ]
-    }
 ]
 
 export default PORTFOLIO_ITEMS;
