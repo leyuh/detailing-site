@@ -18,15 +18,6 @@ const PORTFOLIO_ITEMS = [
         ]
     },
     {
-        model: "2020 Ford EcoSport",
-        images: [
-            {
-                before: "/dummyImage.png",
-                after: "/dummyImage.png"
-            }
-        ]
-    },
-    {
         model: "Tesla Model 3",
         images: [
             {
