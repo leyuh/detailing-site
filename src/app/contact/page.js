@@ -23,7 +23,7 @@ export default function Contact () {
                 <div className="flex flex-col md:flex-row gap-x-8 gap-y-4 w-full items-center">
                     <div className="flex flex-col md:w-[60%]">
                         <div className="m-4 text-lg text-center md:text-left">
-                            <p className="text-3xl leading-tight mb-2">Ready for the car of your dreams?</p>
+                            <p className="text-3xl leading-tight mb-2"><i>Ready for the car of your dreams?</i></p>
                             <p className="leading-tight">Call, text, or email to get started, OR fill out this form to receive a personalized quote!</p>
                         </div>
                         <div className="m-4 text-lg text-center font-semibold">
