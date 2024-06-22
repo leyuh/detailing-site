@@ -42,7 +42,7 @@ export default function Navbar () {
             )}
         </button>
 
-        <div className={`w-[80vw] transition-all h-full z-40 text-zinc-50 shadow-xl p-6 text-2xl font-white fixed ${showMobileNav ? "right-[-80vw]" : "right-0"} md:hidden bg-primary rounded-l-sm`}>
+        <div className={`w-[80vw] transition-all h-full z-40 text-zinc-50 shadow-xl p-6 text-xl font-white fixed ${showMobileNav ? "right-[-80vw]" : "right-0"} md:hidden bg-primary rounded-l-sm`}>
             <nav className="flex flex-col gap-8 font-[400] mt-[80%]">
                 <NavBtn 
                     destination="/"
