@@ -21,12 +21,13 @@ export default function PortfolioItem ({ item, scroll=true }) {
                 <h1 className="absolute z-30 text-zinc-50 text-left top-0 left-0 px-2 bg-black bg-opacity-50 w-full">{item.model}</h1>
                 {Object.keys(item.images[currIndex]).map((label, i) => (
                     <div className="aspect-square w-full relative" key={i}>
-                        <h1 className="absolute z-30 text-zinc-50 mb-1 ml-2 bottom-0">{label.toUpperCase()}</h1>
+                        <h1 className="absolute z-30 text-zinc-50 md:text-xl mb-1 ml-2 bottom-0">{label.toUpperCase()}</h1>
                         <div className="absolute w-full aspect-square">
                             <Image 
                                 src={item.images[currIndex][label]}
                                 alt={label}
                                 sizes="300px"
+                                quality={50}
                                 fill={true}
                                 className="object-cover object-center"
                             />
