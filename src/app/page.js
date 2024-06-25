@@ -21,8 +21,8 @@ export default function Home() {
           />
         </div>
 
-        <div className="info-box text-zinc-50 z-20 mt-0 lg:mt-8 relative mx-auto md:mx-0 max-w-sm sm:max-w-md md:max-w-2xl p-2 md:ml-6">
-          <h1 className="text-4xl sm:text-4xl text-center md:text-left md:text-6xl mb-4 font-[300]">Quality, thorough interior detailing for all vehicles.</h1>
+        <div className="info-box text-zinc-50 z-20 mt-0 lg:mt-8 relative mx-auto md:mx-0 max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-3xl p-2 md:ml-6">
+          <h1 className="text-4xl sm:text-4xl text-center md:text-left md:text-6xl mb-4 font-[300]">Exceptional interior detailing in Brownsville, OR.</h1>
           <div className="flex flex-col md:flex-row gap-x-4 gap-y-3 mx-auto md:mx-0 items-center justify-center md:justify-left w-min">
             <CallToAction 
               text="PORTFOLIO"
