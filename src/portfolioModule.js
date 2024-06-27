@@ -1,6 +1,6 @@
 const PORTFOLIO_ITEMS = [
     {
-        model: "Ford F-350",
+        model: "2019 F-350",
         images: [
             {
                 before: "/portfolio-items/item-1/before-1.png",

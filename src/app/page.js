@@ -13,11 +13,11 @@ export default function Home() {
 
         <div className="w-full h-full absolute overflow-hidden z-10">
           <Image 
-            src="/dummyHeroImage.jpeg"
+            src="/heroImage.png"
             alt="interior"
             fill={true}
             quality="100"
-            className="brightness-50 contrast-125 object-cover z-10"
+            className="brightness-[40%] contrast-[140%] object-cover z-10"
           />
         </div>
 
