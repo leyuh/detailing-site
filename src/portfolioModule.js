@@ -32,9 +32,25 @@ const PORTFOLIO_ITEMS = [
         model: "2001 BMW 325Ci",
         images: [
             {
-                before: "/dummyImage.png",
-                after: "/dummyImage.png"
-            }
+                before: "/portfolio-items/item-2/before-3.png",
+                after: "/portfolio-items/item-2/after-3.png"
+            },
+            {
+                before: "/portfolio-items/item-2/before-1.png",
+                after: "/portfolio-items/item-2/after-1.png"
+            },
+            {
+                before: "/portfolio-items/item-2/before-2.png",
+                after: "/portfolio-items/item-2/after-2.png"
+            },
+            {
+                before: "/portfolio-items/item-2/before-4.png",
+                after: "/portfolio-items/item-2/after-4.png"
+            },
+            {
+                before: "/portfolio-items/item-2/before-5.png",
+                after: "/portfolio-items/item-2/after-5.png"
+            },
         ]
     },
 ]

@@ -27,7 +27,7 @@ export default function PortfolioItem ({ item, scroll=true }) {
                                 src={item.images[currIndex][label]}
                                 alt={label}
                                 sizes="300px"
-                                quality={50}
+                                quality={100}
                                 fill={true}
                                 className="object-cover object-center"
                             />
