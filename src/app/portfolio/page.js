@@ -21,7 +21,7 @@ export default function Portfolio () {
         </div>
         <div className="w-full min-h-[calc(100vh-128px)] md:min-h-[calc(100vh-190px)] bg-zinc-900">
         
-            <div className="grid gap-4 w-full h-full px-2 py-6 grid-cols-1 content-start xl:grid-cols-2">
+            <div className="grid gap-4 w-full h-full px-2 py-6 grid-cols-1 content-start lg:grid-cols-2 2xl:grid-cols-3">
                 {PORTFOLIO_ITEMS.map((item, i) => (
                     <PortfolioItem 
                         item={item}
