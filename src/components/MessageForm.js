@@ -1,6 +1,7 @@
 "use client"
 import { useRef, useState } from "react"
 import emailjs from "@emailjs/browser";
+import useStickyState from "@/useStickyState";
 
 export default function MessageForm () {
     const form = useRef();
@@ -11,6 +12,7 @@ export default function MessageForm () {
     const modelField = useRef();
     const msgField = useRef();
     const sendBtn = useRef();
+
 
     const leatherSeats = useRef();
     const vinylSeats = useRef();
@@ -24,10 +26,13 @@ export default function MessageForm () {
     const emailMe = useRef();
     
     const [formError, setFormError] = useState(false);
+    const [formDisabled, setFormDisabled] = useStickyState(false, "formDisabled");
 
 
     const sendEmail = (e) => {
         e.preventDefault();
+
+        if (formDisabled === true) return;
 
         if (nameField.current.value == "" || phoneField.current.value == "" || modelField.current.value == "") {
             setFormError("Please fill out all required fields before submitting.");
@@ -58,8 +63,8 @@ export default function MessageForm () {
             .then(() => {
                 console.log("Message sent");
 
-                sendBtn.current.value = "Sent!";
                 setFormError(false);
+                setFormDisabled(true);
 
                 nameField.current.value = "";
                 phoneField.current.value = "";
@@ -89,7 +94,7 @@ export default function MessageForm () {
 
 
     return <div className="bg-primary rounded-sm shadow-lg p-2 xl:px-6 xl:py-8 py-6 text-md md:text-lg mb-6 w-full relative">
-        <form ref={form} onSubmit={sendEmail}>
+        <form ref={form} disabled={formDisabled === "false"} onSubmit={sendEmail}>
             {formError && <p className="ml-2 font-semibold text-xl text-center my-2">{formError}</p>}
 
             <label className="ml-2">Full name *</label>
@@ -223,12 +228,15 @@ export default function MessageForm () {
                 className="font-semibold rounded-sm px-1 mb-2 mx-2 w-[calc(100%-16px)] text-black resize-none h-20"
             />
 
+
             <input
                 ref={sendBtn}
                 type="submit"
-                value="Send"
-                className="hover border-2 duration-300 w-[50%] transition-all rounded-sm text-center text-lg px-12 py-1 relative my-2 mx-auto block hoverPrimary"
+                value={formDisabled ? "Sent!" : "Send"}
+                className={`border-2 duration-300 w-[50%] transition-all rounded-sm text-center text-lg px-12 py-1 relative my-2 mx-auto block hoverPrimary hover`}
             />
+
+            
         </form>
     </div>
 }
