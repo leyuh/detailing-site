@@ -86,6 +86,39 @@ const PORTFOLIO_ITEMS = [
             },
         ]
     },
+    {
+        model: "2021 Ford Bronco Sport",
+        images: [
+            {
+                before: "/portfolio-items/item-4/before-1.png",
+                after: "/portfolio-items/item-4/after-1.png"
+            },
+            {
+                before: "/portfolio-items/item-4/before-2.png",
+                after: "/portfolio-items/item-4/after-2.png"
+            },
+            {
+                before: "/portfolio-items/item-4/before-3.png",
+                after: "/portfolio-items/item-4/after-3.png"
+            },
+            {
+                before: "/portfolio-items/item-4/before-4.png",
+                after: "/portfolio-items/item-4/after-4.png"
+            },
+            {
+                before: "/portfolio-items/item-4/before-5.png",
+                after: "/portfolio-items/item-4/after-5.png"
+            },
+            {
+                before: "/portfolio-items/item-4/before-6.png",
+                after: "/portfolio-items/item-4/after-6.png"
+            },
+            {
+                before: "/portfolio-items/item-4/before-7.png",
+                after: "/portfolio-items/item-4/after-7.png"
+            },
+        ]
+    }
 ]
 
 export default PORTFOLIO_ITEMS;
