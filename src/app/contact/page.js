@@ -11,11 +11,11 @@ export default function Contact () {
                 </div>
                 <div className="w-full h-32 absolute top-0">
                     <Image 
-                        src="/heroImage.png"
+                        src="/portfolio-items/item-2/after-4.png"
                         alt="interior"
                         fill={true}
                         quality="100"
-                        className="brightness-[35%] contrast-[130%] object-cover object-center"
+                        className="brightness-[35%] saturate-0 contrast-[130%] object-cover object-center"
                     />
                 </div>
             </div>

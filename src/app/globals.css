@@ -41,3 +41,6 @@ body::-webkit-scrollbar {
   cursor: pointer;
 }
 
+.package-div:hover {
+  @apply shadow-xl;
+}

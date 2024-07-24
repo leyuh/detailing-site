@@ -1,10 +1,11 @@
 import Image from "next/image";
 import CallToAction from "@/components/CallToAction";
-import PRICING_DATA from "@/pricingModule"
+import { PRICING_DATA } from "@/pricingModule"
 import { Fragment } from "react"
 import PORTFOLIO_ITEMS from "@/portfolioModule";
 import PortfolioItem from "@/components/PortfolioItem";
 import Link from "next/link";
+import PackageDiv from "@/components/PackageDiv";
 
 export default function Home() {
   return (
@@ -13,11 +14,11 @@ export default function Home() {
 
         <div className="w-full h-full absolute overflow-hidden z-10">
           <Image 
-            src="/heroImage.png"
+            src="/heroImage2.png"
             alt="interior"
             fill={true}
             quality="100"
-            className="brightness-[40%] contrast-[140%] object-cover z-10"
+            className="brightness-[40%] contrast-[130%] object-cover z-10"
           />
         </div>
 
@@ -53,12 +54,12 @@ export default function Home() {
         
 
           </div>
-          <div className="hidden md:flex relative w-[50%] px-2 my-12 items-center justify-center">
+          <div className="hidden md:flex relative w-[50%] px-2 my-12 items-center justify-center rounded-sm overflow-hidden">
               <Image 
-              src="/dummyImage.png"
-              alt="image"
-              fill={true}
-              className="object-contain object-center p-2"
+                src="/heroImage.png"
+                alt="image"
+                fill={true}
+                className="object-cover contrast-125 brightness-50 rounded-sm object-center p-2"
               />
           </div>
         </div>
@@ -95,6 +96,36 @@ export default function Home() {
         </div>
       </section>
 
+      {/*<div className="packages w-full relative top-0 bg-zinc-950 min-h-[70vh]">
+
+        <div className="w-full text-zinc-50 z-30 relative">
+
+          <div className="bg-zinc-400 absolute w-full h-[75%]">
+            <Image 
+              src="/heroImage.png"
+              alt="interior"
+              fill={true}
+              quality="100"
+              className="brightness-[40%] saturate-50 contrast-[140%] object-cover z-10"
+            />
+          </div>
+
+          <span className="text-center z-20 items-start justify-center gap-1 mb-6 pt-16 flex">
+              <h1 className="font-[300] text-4xl text-center z-20">PACKAGES</h1>
+          </span>
+          
+          <div className="flex flex-col md:flex-row gap-6 max-w-sm px-4 md:px-0 md:max-w-2xl lg:max-w-3xl mx-auto pb-10">
+              <PackageDiv 
+                name="CRIMSON"
+              />
+              <PackageDiv 
+                name="BLACK"
+              />
+          </div>
+
+        </div>
+      </div>*/}
+
       <div className="pricing w-full relative top-0 bg-zinc-900">
         <div className="bg-primary absolute h-full w-[40%] lg:w-[30%] z-20" />
         <div className="w-full md:p-2 text-zinc-50 z-30 relative">
@@ -121,10 +152,6 @@ export default function Home() {
         </div>
       </div>
 
-
-      <section className="contact">
-        
-      </section>
     </>
   );
 }

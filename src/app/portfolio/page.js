@@ -15,7 +15,7 @@ export default function Portfolio () {
                     alt="interior"
                     fill={true}
                     quality="100"
-                    className="brightness-[35%] contrast-[130%] object-cover object-center"
+                    className="brightness-[35%] contrast-[130%] saturate-0 object-cover object-center"
                 />
             </div>
         </div>
