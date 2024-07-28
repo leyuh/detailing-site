@@ -118,7 +118,69 @@ const PORTFOLIO_ITEMS = [
                 after: "/portfolio-items/item-4/after-7.png"
             },
         ]
-    }
+    },
+    {
+        model: "2017 Ford Expedition",
+        images: [
+            {
+                before: "/portfolio-items/item-5/before-1.png",
+                after: "/portfolio-items/item-5/after-1.png"
+            },
+            {
+                before: "/portfolio-items/item-5/before-2.png",
+                after: "/portfolio-items/item-5/after-2.png"
+            },
+            {
+                before: "/portfolio-items/item-5/before-3.png",
+                after: "/portfolio-items/item-5/after-3.png"
+            },
+            {
+                before: "/portfolio-items/item-5/before-4.png",
+                after: "/portfolio-items/item-5/after-4.png"
+            },
+            {
+                before: "/portfolio-items/item-5/before-5.png",
+                after: "/portfolio-items/item-5/after-5.png"
+            },
+            {
+                before: "/portfolio-items/item-5/before-6.png",
+                after: "/portfolio-items/item-5/after-6.png"
+            },
+            {
+                before: "/portfolio-items/item-5/before-7.png",
+                after: "/portfolio-items/item-5/after-7.png"
+            },
+        ]
+    }, 
+    {
+        model: "Honda Minivan",
+        images: [
+            {
+                before: "/portfolio-items/item-6/before-1.png",
+                after: "/portfolio-items/item-6/after-1.png"
+            },
+            {
+                before: "/portfolio-items/item-6/before-2.png",
+                after: "/portfolio-items/item-6/after-2.png"
+            },
+            {
+                before: "/portfolio-items/item-6/before-3.png",
+                after: "/portfolio-items/item-6/after-3.png"
+            },
+            {
+                before: "/portfolio-items/item-6/before-4.png",
+                after: "/portfolio-items/item-6/after-4.png"
+            },
+            {
+                before: "/portfolio-items/item-6/before-5.png",
+                after: "/portfolio-items/item-6/after-5.png"
+            },
+            {
+                before: "/portfolio-items/item-6/before-6.png",
+                after: "/portfolio-items/item-6/after-6.png"
+            }
+        ]
+    }, 
 ]
 
 export default PORTFOLIO_ITEMS;
