@@ -153,7 +153,7 @@ const PORTFOLIO_ITEMS = [
         ]
     }, 
     {
-        model: "Honda Minivan",
+        model: "2008 Honda Odyssey",
         images: [
             {
                 before: "/portfolio-items/item-6/before-1.png",
