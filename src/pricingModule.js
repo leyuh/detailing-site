@@ -16,7 +16,7 @@ export const PACKAGES_DATA = {
         prices: {
             "S (1 row)": "$50-75",
             "M (2 rows)": "$100-125",
-            "L (3+ rows)": "$125-$175"
+            "L (3+ rows)": "$125-175"
         }
     },
     BLACK: {
@@ -31,7 +31,7 @@ export const PACKAGES_DATA = {
         prices: {
             "S (1 row)": "$75-100",
             "M (2 rows)": "$150-175",
-            "L (3+ rows)": "$175-$225"
+            "L (3+ rows)": "$175-225"
         }
     }
 }
