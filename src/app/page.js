@@ -68,7 +68,7 @@ export default function Home() {
       <section className="portfolio bg-zinc-950">
         <h1 className="font-[300] text-4xl pt-12 z-20 items-center mb-2 text-zinc-50 text-center">MY WORK</h1>
         <div className="relative no-scrollbar flex gap-4 w-[calc(100vw-32px)] m-4 overflow-x-scroll">
-          {PORTFOLIO_ITEMS.filter((item, i) => i < 6).map((item, i) => (
+          {PORTFOLIO_ITEMS.filter((item, i) => (i == 0 || i == 1 || i == 3 || i == 4 || i == 7)).reverse().map((item, i) => (
             <div className="flex flex-row items-center w-[320px] md:w-[480px] relative shrink-0 grow-0 rounded-sm overflow-hidden shadow-md">
               {Object.keys(item.images[0]).map((label, i) => (
                   <div className="aspect-square w-full relative" key={i}>
@@ -96,11 +96,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/*<div className="packages w-full relative top-0 bg-zinc-950 min-h-[70vh]">
+      {<div className="packages w-full relative top-0 bg-zinc-950 min-h-[70vh] pb-16">
 
         <div className="w-full text-zinc-50 z-30 relative">
 
-          <div className="bg-zinc-400 absolute w-full h-[75%]">
+          <div className="bg-zinc-400 absolute w-full h-[65%]">
             <Image 
               src="/heroImage.png"
               alt="interior"
@@ -114,7 +114,10 @@ export default function Home() {
               <h1 className="font-[300] text-4xl text-center z-20">PACKAGES</h1>
           </span>
           
-          <div className="flex flex-col md:flex-row gap-6 max-w-sm px-4 md:px-0 md:max-w-2xl lg:max-w-3xl mx-auto pb-10">
+          <div className="flex px-6 flex-col md:flex-row gap-6 max-w-sm md:px-0 md:max-w-3xl lg:max-w-5xl mx-auto pb-10">
+            <PackageDiv 
+                name="WHITE"
+              />
               <PackageDiv 
                 name="CRIMSON"
               />
@@ -123,10 +126,13 @@ export default function Home() {
               />
           </div>
 
-        </div>
-      </div>*/}
+          <h1 className="font-[300] text-2xl text-center z-20 mt-4 pb-2">MAINTENANCE</h1>
+          <p className="text-center max-w-sm md:max-w-3xl px-2 lg:max-w-5xl mx-auto text-md pb-2">Maintenance details are offered monthly or every other month after completion of any of the above details. Pricing begins at $50 per visit.</p>
 
-      <div className="pricing w-full relative top-0 bg-zinc-900">
+        </div>
+      </div>}
+
+      {/*<div className="pricing w-full relative top-0 bg-zinc-900">
         <div className="bg-primary absolute h-full w-[40%] lg:w-[30%] z-20" />
         <div className="w-full md:p-2 text-zinc-50 z-30 relative">
 
@@ -150,7 +156,7 @@ export default function Home() {
           <hr className="mt-8 max-w-[80vw] mx-auto"/>
           <p className="max-w-sm sm:max-w-lg md:max-w-3xl text-center mx-auto mt-2 text-sm px-2 pb-16">* Prices and durations are general estimates and vary based on the vehicle type and condition. <Link href="/contact" className="underline">Click here</Link> for an accurate estimate on your vehicle.</p>
         </div>
-      </div>
+      </div>*/}
 
     </>
   );

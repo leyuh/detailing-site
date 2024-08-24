@@ -29,6 +29,10 @@ body::-webkit-scrollbar {
   @apply bg-zinc-50 border-zinc-50 text-black bg-none;
 }
 
+.hoverSecondary:hover {
+  @apply bg-zinc-500 border-zinc-500 text-white bg-none;
+}
+
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }

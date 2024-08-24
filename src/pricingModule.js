@@ -5,33 +5,43 @@ export const PRICING_DATA = [
 ]
 
 export const PACKAGES_DATA = {
-    CRIMSON: {
+    WHITE: {
         features: [
             "Thorough vacuum",
-            "Plastics, mats, & glass cleaning",
-            "Leather cleaning & conditioning",
-            "Fabric seat shampoo & extraction (when applicable)",
-            "Carpet shampoo & extraction (when applicable)"
+            "Plastics & leather cleaning",
+            "Rubber mat cleaning",
+            "Glass cleaning"
         ],
         prices: {
-            "S (1 row)": "$50-75",
-            "M (2 rows)": "$100-125",
-            "L (3+ rows)": "$125-175"
+            "S": "$50",
+            "M": "$75",
+            "L": "$100"
+        }
+    },
+    CRIMSON: {
+        features: [
+            "All White features",
+            "Carpet mat shampooing",
+            "Upholstery shampooing",
+            "Door jamb cleaning & protection",
+        ],
+        prices: {
+            "S": "$75",
+            "M": "$100",
+            "L": "$125"
         }
     },
     BLACK: {
         features: [
-            "All crimson features",
-            "Ozone odor elimination (when applicable)",
-            "Door jamb cleaning & protection",
-            "Rubber mat protection & restoration",
-            "Plastics protection & restoration",
-            "Carpet mat & fabric seat liquid repellent"
+            "All Crimson features",
+            "Carpet shampooing",
+            "Plastics, leather, & rubber protection & restoration",
+            "Ozone odor elimination"
         ],
         prices: {
-            "S (1 row)": "$75-100",
-            "M (2 rows)": "$150-175",
-            "L (3+ rows)": "$175-225"
+            "S": "$100",
+            "M": "$150",
+            "L": "$200"
         }
     }
 }
