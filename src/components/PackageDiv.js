@@ -4,7 +4,7 @@ import { Check } from "./Icons"
 import Link from "next/link"
 
 export default function PackageDiv ({ name }) {
-    return <div className={`${name === "CRIMSON" ? "bg-primary" : name === "WHITE" ? "bg-zinc-50 text-zinc-500" : "bg-zinc-950 border-[1px]"} border-zinc-900 box-border relative transition-all package-div rounded-sm p-4 pt-8 w-full z-10 shadow-md`}>
+    return <div className={`${name === "CRIMSON" ? "bg-primary primary-gradient border-primary" : name === "WHITE" ? "bg-zinc-50 text-zinc-500 white-gradient border-zinc-500" : "bg-zinc-950 black-gradient border-zinc-900"} border-[1px] box-border relative transition-all package-div rounded-sm p-4 pt-8 w-full z-10 shadow-md`}>
         <h1 className="text-center text-2xl my-2 font-[400]">{name}</h1>
         <hr className="w-[90%] mx-auto" />
 

@@ -41,10 +41,18 @@ body::-webkit-scrollbar {
   @apply bg-gradient-to-br from-primary to-primary2 transition-all;
 }
 
+.black-gradient {
+  @apply bg-gradient-to-br from-zinc-950 to-black transition-all;
+}
+
+.white-gradient {
+  @apply bg-gradient-to-br from-zinc-50 to-zinc-300 transition-all;
+}
+
 .hover:hover {
   cursor: pointer;
 }
 
 .package-div:hover {
-  @apply shadow-xl;
+  @apply shadow-xl border-white;
 }
