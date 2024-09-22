@@ -231,6 +231,35 @@ const PORTFOLIO_ITEMS = [
             },
         ]
     },
+    {
+        model: "2023 Ford Ranger",
+        images: [
+            {
+                before: "/portfolio-items/item-9/before-1.png",
+                after: "/portfolio-items/item-9/after-1.png"
+            },
+            {
+                before: "/portfolio-items/item-9/before-2.png",
+                after: "/portfolio-items/item-9/after-2.png"
+            },
+            {
+                before: "/portfolio-items/item-9/before-3.png",
+                after: "/portfolio-items/item-9/after-3.png"
+            },
+            {
+                before: "/portfolio-items/item-9/before-4.png",
+                after: "/portfolio-items/item-9/after-4.png"
+            },
+            {
+                before: "/portfolio-items/item-9/before-5.png",
+                after: "/portfolio-items/item-9/after-5.png"
+            },
+            {
+                before: "/portfolio-items/item-9/before-6.png",
+                after: "/portfolio-items/item-9/after-6.png"
+            },
+        ]
+    },
 ]
 
 export default PORTFOLIO_ITEMS;
