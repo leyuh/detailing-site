@@ -46,10 +46,6 @@ export default function MessageForm () {
             return;
         }
 
-        if (emailMe.current.checked && emailField.current.value == "") {
-            setFormError("Please provide an email address if you would like to receive an email.");
-            return;
-        }
 
         emailjs.init(process.env.PUBLIC_KEY);
 
