@@ -126,9 +126,21 @@ export default function Home() {
               />
           </div>
 
-          <h1 className="font-[300] text-2xl text-center z-20 mt-4 pb-2">MAINTENANCE</h1>
-          <p className="text-center max-w-sm md:max-w-3xl px-2 lg:max-w-5xl mx-auto text-md pb-2">Maintenance details are offered monthly or every other month after completion of any of the above details. Pricing begins at $50 per visit.</p>
-
+          <h1 className="font-[600] text-2xl text-center z-20 mt-4 pb-2">ADD-ONS</h1>
+          <ul className="text-center max-w-sm px-2 mx-auto text-lg pb-2">
+            <li className="flex justify-between mx-6">
+              <p>Carpet shampooing:</p>
+              <p className="font-[800]">$25</p>
+            </li>
+            <li className="flex justify-between mx-6">
+              <p>Seat shampooing:</p>
+              <p className="font-[800]">$25</p>
+            </li>
+            <li className="flex justify-between mx-6">
+              <p>Ozone odor elimination:</p>
+              <p className="font-[800]">$25</p>
+            </li>
+          </ul>
         </div>
       </div>}
 

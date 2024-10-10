@@ -6,42 +6,41 @@ export const PRICING_DATA = [
 
 export const PACKAGES_DATA = {
     WHITE: {
+        desc: "Interior Detail",
         features: [
+            "Door jamb cleaning",
             "Thorough vacuum",
-            "Plastics & leather cleaning",
-            "Rubber mat cleaning",
-            "Glass cleaning"
-        ],
-        prices: {
-            "S": "$50",
-            "M": "$75",
-            "L": "$100"
-        }
-    },
-    CRIMSON: {
-        features: [
-            "All White features",
-            "Carpet mat shampooing",
-            "Upholstery shampooing",
-            "Door jamb cleaning & protection",
-        ],
-        prices: {
-            "S": "$75",
-            "M": "$100",
-            "L": "$125"
-        }
-    },
-    BLACK: {
-        features: [
-            "All Crimson features",
-            "Carpet shampooing",
-            "Plastics, leather, & rubber protection & restoration",
-            "Ozone odor elimination"
+            "Plastics, vinyl, & leather cleaning",
+            "Interior glass cleaning",
+            "Hard surfaces UV protection & restoration"
         ],
         prices: {
             "S": "$100",
+            "M": "$125",
+            "L": "$150"
+        }
+    },
+    CRIMSON: {
+        desc: "Exterior Hand Wash",
+        features: [
+            "Bug removal",
+            "Two bucket wash & wax",
+            "Wheel & tire cleaning",
+            "Exterior glass cleaning"
+        ],
+        price: "$50"
+    },
+    BLACK: {
+        desc: "Full Detail",
+        features: [
+            "All White features",
+            "All Crimson features",
+            "Discounted price"
+        ],
+        prices: {
+            "S": "$125",
             "M": "$150",
-            "L": "$200"
+            "L": "$175"
         }
     }
 }

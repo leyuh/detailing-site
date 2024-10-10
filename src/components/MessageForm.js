@@ -7,22 +7,30 @@ export default function MessageForm () {
     const form = useRef();
 
     const nameField = useRef();
-    const emailField = useRef();
     const phoneField = useRef();
+
     const modelField = useRef();
+
+    const seatField = useRef();
+    const lastDetailField = useRef();
+
+    const whiteField = useRef();
+    const crimsonField = useRef();
+    const blackField = useRef();
+
+    const ozoneField = useRef();
+    const carpetShampooField = useRef();
+    const seatShampooField = useRef();
+
+    const petHairField = useRef();
+    const stainingField = useRef();
+    const dirtyField = useRef();
+
     const msgField = useRef();
     const sendBtn = useRef();
 
-    const leatherSeats = useRef();
-    const fabricSeats = useRef();
-    const clothSeats = useRef();
-
-    const badCarpet = useRef();
-    const midCarpet = useRef();
-    const goodCarpet = useRef();
-
     const textMe = useRef();
-    const emailMe = useRef();
+    const callMe = useRef();
     
     const [formError, setFormError] = useState(false);
     const [formDisabled, setFormDisabled] = useStickyState(false, "formDisabled");
@@ -51,11 +59,13 @@ export default function MessageForm () {
             {
                 "user_name": nameField.current.value,
                 "user_phone": phoneField.current.value,
-                "user_email": emailField.current.value,
                 "vehicle_model": modelField.current.value,
-                "seat_material": [leatherSeats, fabricSeats, clothSeats].filter(ref => ref.current.checked == true)[0].current.value,
-                "carpet_condition": [badCarpet, midCarpet, goodCarpet].filter(ref => ref.current.checked == true)[0].current.value,
-                "method": [textMe, emailMe].filter(ref => ref.current.checked == true)[0].current.value,
+                "seat_material": seatField.current.value,
+                "last_detail": lastDetailField.current.value,
+                "desired_package": [whiteField, crimsonField, blackField].filter(ref => ref.current.checked == true)[0].current.value,
+                "add_ons": [ozoneField, carpetShampooField, seatShampooField].filter(ref => ref.current.checked == true).map(ref => ref.current.value),
+                "vehicle_state": [petHairField, stainingField, dirtyField].filter(ref => ref.current.checked == true).map(ref => ref.current.value),
+                "method": [textMe, callMe].filter(ref => ref.current.checked == true)[0].current.value,
                 "message": msgField.current.value
             }
         )
@@ -67,20 +77,27 @@ export default function MessageForm () {
 
                 nameField.current.value = "";
                 phoneField.current.value = "";
-                emailField.current.value = "";
+
                 modelField.current.value = "";
+                seatField.current.value = "",
+                lastDetailField.current.value = "",
+
                 msgField.current.value = "";
                 
-                leatherSeats.current.checked = false;
-                fabricSeats.current.checked = false;
-                clothSeats.current.checked = false;
+                whiteField.current.checked = false;
+                crimsonField.current.checked = false;
+                blackField.current.checked = false;
 
-                badCarpet.current.checked = false;
-                midCarpet.current.checked = false;
-                goodCarpet.current.checked = false;
+                ozoneField.current.checked = false;
+                carpetShampooField.current.checked = false;
+                seatShampooField.current.checked = false;
+
+                petHairField.current.checked = false;
+                stainingField.current.checked = false;
+                dirtyField.current.checked = false;
 
                 textMe.current.checked = false;
-                emailMe.current.checked = false;
+                callMe.current.checked = false;
 
                 return false;
             }, (error) => {
@@ -104,7 +121,7 @@ export default function MessageForm () {
                 className="mb-2 rounded-sm px-1 font-semibold mx-2 w-[calc(100%-16px)] text-black"
             />
 
-            <label className="ml-2">Phone *</label>
+            <label className="ml-2">Phone number *</label>
             <input
                 ref={phoneField}
                 type="text"
@@ -112,15 +129,7 @@ export default function MessageForm () {
                 className="font-semibold rounded-sm px-1 mb-2 mx-2 w-[calc(100%-16px)] text-black"
             />
 
-            <label className="ml-2">Email</label>
-            <input
-                ref={emailField}
-                type="text"
-                name="user_email"
-                className="font-semibold rounded-sm px-1 mb-2 mx-2 w-[calc(100%-16px)] text-black"
-            />
-
-            <label className="ml-2">Vehicle Make &amp; Model *</label>
+            <label className="ml-2">Vehicle year, make, &amp; model *</label>
             <input
                 ref={modelField}
                 type="text"
@@ -128,71 +137,121 @@ export default function MessageForm () {
                 className="font-semibold rounded-sm px-1 mb-2 mx-2 w-[calc(100%-16px)] text-black"
             />
 
+            <label className="ml-2">Seat material *</label>
+            <input
+                ref={seatField}
+                type="text"
+                name="seat_material"
+                className="font-semibold rounded-sm px-1 mb-2 mx-2 w-[calc(100%-16px)] text-black"
+            />
+
+            <label className="ml-2">Last time interior detailed</label>
+            <input
+                ref={lastDetailField}
+                type="text"
+                name="last_detail"
+                className="font-semibold rounded-sm px-1 mb-2 mx-2 w-[calc(100%-16px)] text-black"
+            />
+
             <fieldset className="border-2 px-2 mx-2 mb-2 pb-1 rounded-sm">
-                <legend className="ml-2 px-2 mb-0">Seat Material</legend>
+                <legend className="ml-2 px-2 mb-0">Desired package:</legend>
                 <div className="flex gap-2">
                     <input
-                        ref={leatherSeats}
+                        ref={whiteField}
                         type="radio"
-                        id="leather"
-                        name="seat"
-                        value="leather"
+                        id="white-package"
+                        name="package"
+                        value="white" 
                     />
-                    <label htmlFor="leather">Leather / Vinyl</label>
+                    <label htmlFor="white-package">White - Interior Only</label>
                 </div>
                 <div className="flex gap-2">
                     <input
-                        ref={fabricSeats}
+                        ref={crimsonField}
                         type="radio"
-                        id="fabric"
-                        name="seat"
-                        value="fabric"
+                        id="crimson-package"
+                        name="package"
+                        value="crimson" 
                     />
-                    <label htmlFor="fabric">Fabric</label>
+                    <label htmlFor="crimson-package">Crimson - Exterior Only</label>
                 </div>
                 <div className="flex gap-2">
                     <input
-                        ref={clothSeats}
+                        ref={blackField}
                         type="radio"
-                        id="cloth"
-                        name="seat"
-                        value="cloth"
+                        id="black-package"
+                        name="package"
+                        value="black"
                     />
-                    <label htmlFor="cloth">Cloth</label>
+                    <label htmlFor="black-package">Black - Full Detail</label>
                 </div>
             </fieldset>
 
             <fieldset className="border-2 px-2 mx-2 mb-2 pb-1 rounded-sm">
-                <legend className="ml-2 px-2 mb-0">How's the carpet?</legend>
+                <legend className="ml-2 px-2 mb-0">Add-ons:</legend>
                 <div className="flex gap-2">
                     <input
-                        ref={badCarpet}
-                        type="radio"
-                        id="bad-carpet"
-                        name="carpet"
-                        value="bad" 
+                        ref={ozoneField}
+                        type="checkbox"
+                        id="ozone"
+                        name="add-ons"
+                        value="ozone" 
                     />
-                    <label htmlFor="bad-carpet">Lots of pet hair or heavy stains.</label>
+                    <label htmlFor="ozone">Ozone odor elimination ($25)</label>
                 </div>
                 <div className="flex gap-2">
                     <input
-                        ref={midCarpet}
-                        type="radio"
-                        id="mid-carpet"
-                        name="carpet"
-                        value="mediocre" 
+                        ref={carpetShampooField}
+                        type="checkbox"
+                        id="carpet-shampoo"
+                        name="add-ons"
+                        value="carpet-shampoo" 
                     />
-                    <label htmlFor="mid-carpet">Mild stains, needs a wash.</label>
+                    <label htmlFor="carpet-shampoo">Carpet shampoo ($25)</label>
                 </div>
                 <div className="flex gap-2">
                     <input
-                        ref={goodCarpet}
-                        type="radio"
-                        id="good-carpet"
-                        name="carpet"
-                        value="good"
+                        ref={seatShampooField}
+                        type="checkbox"
+                        id="seat-shampoo"
+                        name="add-ons"
+                        value="seat-shampoo"
                     />
-                    <label htmlFor="good-carpet">Good, just needs a vacuum.</label>
+                    <label htmlFor="seat-shampoo">Seat shampoo ($25)</label>
+                </div>
+            </fieldset>
+
+            <fieldset className="border-2 px-2 mx-2 mb-2 pb-1 rounded-sm">
+                <legend className="ml-2 px-2 mb-0">Select all that apply:</legend>
+                <div className="flex gap-2">
+                    <input
+                        ref={petHairField}
+                        type="checkbox"
+                        id="pet-hair"
+                        name="vehicle-state"
+                        value="pet-hair" 
+                    />
+                    <label htmlFor="pet-hair">Significant pet hair build up</label>
+                </div>
+                <div className="flex gap-2">
+                    <input
+                        ref={stainingField}
+                        type="checkbox"
+                        id="significant-staining"
+                        name="vehicle-state"
+                        value="significant-staining" 
+                    />
+                    <label htmlFor="significant-staining">Significant carpet / seat staining</label>
+                </div>
+                <div className="flex gap-2">
+                    <input
+                        ref={dirtyField}
+                        type="checkbox"
+                        id="dirty"
+                        name="vehicle-state"
+                        value="dirty"
+                    />
+                    <label htmlFor="dirty">Excessive dirt &amp; debris</label>
                 </div>
             </fieldset>
 
@@ -210,17 +269,17 @@ export default function MessageForm () {
                 </div>
                 <div className="flex gap-2">
                     <input
-                        ref={emailMe}
+                        ref={callMe}
                         type="radio"
-                        id="email-me"
+                        id="call-me"
                         name="method"
-                        value="email" 
+                        value="call" 
                     />
-                    <label htmlFor="email-me">Email me</label>
+                    <label htmlFor="call-me">Call me</label>
                 </div>
             </fieldset>
 
-            <label className="ml-2 mt-2">Questions or other details:</label>
+            <label className="ml-2 mt-2">Questions, priorities, other info:</label>
             <textarea
                 ref={msgField}
                 name="message"
@@ -231,7 +290,7 @@ export default function MessageForm () {
             <input
                 ref={sendBtn}
                 type="submit"
-                value={formDisabled ? "Sent!" : "Send"}
+                value={formDisabled ? "Sent!" : "Submit"}
                 className={`border-2 duration-300 w-[50%] transition-all rounded-sm text-center text-lg px-12 py-1 relative my-2 mx-auto block hoverPrimary hover`}
             />
 

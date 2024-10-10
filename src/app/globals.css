@@ -56,3 +56,11 @@ body::-webkit-scrollbar {
 .package-div:hover {
   @apply shadow-xl border-white;
 }
+
+input[type='checkbox'] {
+  accent-color: black;
+}
+
+input[type='radio'] {
+  accent-color: black;
+}
