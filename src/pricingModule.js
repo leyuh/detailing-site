@@ -23,7 +23,7 @@ export const PACKAGES_DATA = {
     CRIMSON: {
         desc: "Exterior Hand Wash",
         features: [
-            "Two bucket wash & wax",
+            "Two bucket hand wash",
             "Wheel & tire cleaning",
             "Hand dry",
             "Tire dressing"
