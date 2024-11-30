@@ -7,6 +7,8 @@ import PortfolioItem from "@/components/PortfolioItem";
 import Link from "next/link";
 import PackageDiv from "@/components/PackageDiv";
 
+const featuredPortfolioItems = [1, 2, 3, 4, 5];
+
 export default function Home() {
   return (
     <>
@@ -68,7 +70,7 @@ export default function Home() {
       <section className="portfolio bg-zinc-950">
         <h1 className="font-[300] text-4xl pt-12 z-20 items-center mb-2 text-zinc-50 text-center">MY WORK</h1>
         <div className="relative no-scrollbar flex gap-4 w-[calc(100vw-32px)] m-4 overflow-x-scroll">
-          {PORTFOLIO_ITEMS.filter((item, i) => (i == 0 || i == 1 || i == 3 || i == 4 || i == 7)).reverse().map((item, i) => (
+          {PORTFOLIO_ITEMS.filter((item, i) => (featuredPortfolioItems.indexOf(i-1) !== -1)).reverse().map((item, i) => (
             <div className="flex flex-row items-center w-[320px] md:w-[480px] relative shrink-0 grow-0 rounded-sm overflow-hidden shadow-md">
               {Object.keys(item.images[0]).map((label, i) => (
                   <div className="aspect-square w-full relative" key={i}>
