@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const font = Quicksand({ subsets: ["latin"], weight: ['300', '400', '600'] });
+const font = Quicksand({ subsets: ["latin"], weight: ['300', '400', '600'], display: "swap" });
 
 export const metadata = {
   title: "Devlin Auto Detail",

@@ -8,11 +8,11 @@ export const PACKAGES_DATA = {
     WHITE: {
         desc: "Interior Detail",
         features: [
-            "Door jamb cleaning",
             "Thorough vacuum",
             "Plastics, vinyl, & leather cleaning",
             "Interior glass cleaning",
-            "Hard surfaces UV protection & restoration"
+            "Protectant application",
+            "Door jamb cleaning"
         ],
         prices: {
             "S": "$100",

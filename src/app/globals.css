@@ -14,16 +14,13 @@ body::-webkit-scrollbar {
   @apply transition-all text-lg text-center duration-300 w-32;
 }
 .nav-div > a:hover {
-  @apply text-black;
+  @apply text-zinc-300;
 }
 
 .nav-logo {
   @apply transition-all duration-300;
 }
 
-.nav-logo:hover {
-  @apply brightness-0;
-}
 
 .hoverPrimary:hover {
   @apply bg-zinc-50 border-zinc-50 text-black bg-none;

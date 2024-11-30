@@ -45,8 +45,8 @@ export default function Home() {
       <div className="about w-full relative top-0 bg-zinc-900 min-h-[50vh]">
         <div className="bg-primary absolute h-full w-[40%] lg:w-[30%] right-0 z-20" />
 
-        <div className="flex flex-row w-full h-full z-30 relative px-8 sm:px-12 py-6 gap-8 2xl:gap-16 lg:px-24 xl:px-40">
-          <div className="relative w-full md:w-[50%] flex justify-center items-center my-[10%]">
+        <div className="flex flex-row w-full h-full z-30 relative px-8 sm:px-12 py-6 gap-8 2xl:gap-16 lg:px-24">
+          <div className="relative w-full md:w-[40%] flex justify-center items-center my-[10%]">
 
               <div className="w-full p-2 my-20 text-zinc-50">
                 <h1 className="font-[300] text-4xl text-left z-20 items-center mb-2">ABOUT</h1>
@@ -56,12 +56,12 @@ export default function Home() {
         
 
           </div>
-          <div className="hidden md:flex relative w-[50%] px-2 my-12 items-center justify-center rounded-sm overflow-hidden">
+          <div className="hidden md:flex relative w-[60%] px-2 my-12 items-center justify-center rounded-sm overflow-hidden">
               <Image 
-                src="/heroImage.png"
+                src="/ecosport.JPEG"
                 alt="image"
                 fill={true}
-                className="object-cover contrast-125 brightness-50 rounded-sm object-center p-2"
+                className="object-cover brightness-[105%] contrast-[105%] saturation-[90%] rounded-sm object-center p-2"
               />
           </div>
         </div>
@@ -102,13 +102,13 @@ export default function Home() {
 
         <div className="w-full text-zinc-50 z-30 relative">
 
-          <div className="bg-zinc-400 absolute w-full h-[65%]">
+          <div className="bg-zinc-400 absolute w-full h-[80%] md:h-[65%]">
             <Image 
-              src="/heroImage.png"
+              src="/portfolio-items/item-9/after-4.png"
               alt="interior"
               fill={true}
               quality="100"
-              className="brightness-[40%] saturate-50 contrast-[140%] object-cover z-10"
+              className="brightness-[30%] saturate-[90%] contrast-[120%] object-cover z-10"
             />
           </div>
 
