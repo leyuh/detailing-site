@@ -16,11 +16,11 @@ export default function Home() {
 
         <div className="w-full h-full absolute overflow-hidden z-10">
           <Image 
-            src="/heroImage2.png"
+            src="/cleaning/dash-1.jpeg"
             alt="interior"
             fill={true}
             quality="100"
-            className="brightness-[40%] contrast-[130%] object-cover z-10"
+            className="brightness-[45%] contrast-[125%] saturate-[80%] object-cover z-10"
           />
         </div>
 
@@ -58,7 +58,7 @@ export default function Home() {
           </div>
           <div className="hidden md:flex relative w-[60%] px-2 my-12 items-center justify-center rounded-sm overflow-hidden">
               <Image 
-                src="/ecosport.JPEG"
+                src="/portfolio-items/item-11/after-3.png"
                 alt="image"
                 fill={true}
                 className="object-cover brightness-[105%] contrast-[105%] saturation-[90%] rounded-sm object-center p-2"
@@ -67,48 +67,19 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="portfolio bg-zinc-950">
-        <h1 className="font-[300] text-4xl pt-12 z-20 items-center mb-2 text-zinc-50 text-center">MY WORK</h1>
-        <div className="relative no-scrollbar flex gap-4 w-[calc(100vw-32px)] m-4 overflow-x-scroll">
-          {PORTFOLIO_ITEMS.filter((item, i) => (featuredPortfolioItems.indexOf(i-1) !== -1)).reverse().map((item, i) => (
-            <div className="flex flex-row items-center w-[320px] md:w-[480px] relative shrink-0 grow-0 rounded-sm overflow-hidden shadow-md">
-              {Object.keys(item.images[0]).map((label, i) => (
-                  <div className="aspect-square w-full relative" key={i}>
-                      <h1 className="absolute z-30 text-zinc-50 mb-1 ml-2 bottom-0">{label.toUpperCase()}</h1>
-                      <div className="absolute w-full aspect-square">
-                          <Image 
-                              src={item.images[0][label]}
-                              alt={label}
-                              sizes="300px"
-                              fill={true}
-                              className="object-cover object-center"
-                          />
-                      </div>
-                  </div>
-              ))}
-          </div>
-          ))}
-        </div>
-        <div className="flex w-full pt-2 pb-12 items-center justify-center">
-          <CallToAction 
-            text="VIEW ALL"
-            destination="/portfolio"
-            classes="border-zinc-50 bg-transparent text-zinc-50"
-          />
-        </div>
-      </section>
+      
 
-      {<div className="packages w-full relative top-0 bg-zinc-950 min-h-[70vh] pb-16">
+      {<div className="packages w-full relative top-0 bg-zinc-950 min-h-[70vh] pb-8">
 
         <div className="w-full text-zinc-50 z-30 relative">
 
           <div className="bg-zinc-400 absolute w-full h-[80%] md:h-[65%]">
             <Image 
-              src="/portfolio-items/item-9/after-4.png"
+              src="/cleaning/controls.jpeg"
               alt="interior"
               fill={true}
               quality="100"
-              className="brightness-[30%] saturate-[90%] contrast-[120%] object-cover z-10"
+              className="brightness-[35%] contrast-[125%] saturate-[80%] object-cover z-10"
             />
           </div>
 
@@ -145,6 +116,37 @@ export default function Home() {
           </ul>
         </div>
       </div>}
+
+      <section className="portfolio bg-zinc-900">
+        <h1 className="font-[300] text-4xl pt-12 z-20 items-center mb-2 text-zinc-50 text-center">MY WORK</h1>
+        <div className="relative no-scrollbar flex gap-4 w-[calc(100vw-32px)] m-4 overflow-x-scroll">
+          {PORTFOLIO_ITEMS.filter((item, i) => (featuredPortfolioItems.indexOf(i-1) !== -1)).reverse().map((item, i) => (
+            <div className="flex flex-row items-center w-[320px] md:w-[480px] relative shrink-0 grow-0 rounded-sm overflow-hidden shadow-md">
+              {Object.keys(item.images[0]).map((label, i) => (
+                  <div className="aspect-square w-full relative" key={i}>
+                      <h1 className="absolute z-30 text-zinc-50 mb-1 ml-2 bottom-0">{label.toUpperCase()}</h1>
+                      <div className="absolute w-full aspect-square">
+                          <Image 
+                              src={item.images[0][label]}
+                              alt={label}
+                              sizes="300px"
+                              fill={true}
+                              className="object-cover object-center"
+                          />
+                      </div>
+                  </div>
+              ))}
+          </div>
+          ))}
+        </div>
+        <div className="flex w-full pt-2 pb-12 items-center justify-center">
+          <CallToAction 
+            text="VIEW ALL"
+            destination="/portfolio"
+            classes="border-zinc-50 bg-transparent text-zinc-50"
+          />
+        </div>
+      </section>
 
       {/*<div className="pricing w-full relative top-0 bg-zinc-900">
         <div className="bg-primary absolute h-full w-[40%] lg:w-[30%] z-20" />

@@ -5,17 +5,17 @@ import { Mail, Phone, Pin } from "@/components/Icons";
 export default function Contact () {
     return <section>
         <div className="bg-zinc-900 w-full min-h-[100vh] md:min-h-[calc(100vh-64px)]">
-            <div className="w-full h-32 relative">
+            <div className="w-full h-[300px] relative">
                 <div className="flex w-full h-full items-center justify-center">
                     <h1 className="text-zinc-50 font-[300] text-4xl text-center z-20 items-center">CONTACT</h1>
                 </div>
-                <div className="w-full h-32 absolute top-0">
+                <div className="w-full h-[300px] absolute top-0">
                     <Image 
-                        src="/portfolio-items/item-2/after-4.png"
+                        src="/cleaning/wheel-1.jpeg"
                         alt="interior"
                         fill={true}
                         quality="100"
-                        className="brightness-[35%] saturate-0 contrast-[130%] object-cover object-center"
+                        className="brightness-[35%] contrast-[125%] saturate-[0%] object-cover object-center"
                     />
                 </div>
             </div>
@@ -24,7 +24,7 @@ export default function Contact () {
                     <div className="flex flex-col md:w-[60%]">
                         <div className="m-4 text-lg text-center md:text-left">
                             <p className="text-3xl leading-tight mb-2"><i>Ready for the car of your dreams?</i></p>
-                            <p className="leading-tight">Send me an email to get started, OR fill out this form to receive a personalized quote!</p>
+                            <p className="leading-tight mt-4">Fill out this form to receive a personalized quote!</p>
                         </div>
                         <div className="m-4 text-lg text-center font-semibold">
                             <p>Claire Devlin</p>

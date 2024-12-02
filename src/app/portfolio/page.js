@@ -11,11 +11,11 @@ export default function Portfolio () {
             </div>
             <div className="w-full h-32 absolute top-0">
                 <Image 
-                    src="/heroImage.png"
+                    src="/cleaning/dash-4.jpeg"
                     alt="interior"
                     fill={true}
                     quality="100"
-                    className="brightness-[35%] contrast-[130%] saturate-0 object-cover object-center"
+                    className="brightness-[35%] contrast-[125%] saturate-[0%] object-cover object-center"
                 />
             </div>
         </div>
