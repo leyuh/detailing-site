@@ -10,8 +10,8 @@ export const PACKAGES_DATA = {
         features: [
             "Thorough vacuum",
             "Plastics, vinyl, & leather cleaning",
+            "Steam cleaning",
             "Interior glass cleaning",
-            "Protectant application",
             "Door jamb cleaning"
         ],
         prices: {
@@ -28,7 +28,7 @@ export const PACKAGES_DATA = {
             "Hand dry",
             "Tire dressing"
         ],
-        price: "$50"
+        price: "$60"
     },
     BLACK: {
         desc: "Full Detail",
@@ -38,9 +38,9 @@ export const PACKAGES_DATA = {
             "Discounted price"
         ],
         prices: {
-            "S": "$125",
-            "M": "$150",
-            "L": "$175"
+            "S": "$150",
+            "M": "$175",
+            "L": "$200"
         }
     }
 }
