@@ -15,15 +15,15 @@ export const PACKAGES_DATA = {
             "Door jamb cleaning"
         ],
         prices: {
-            "S": "$100",
-            "M": "$125",
-            "L": "$150"
+            "S": "$125",
+            "M": "$150",
+            "L": "$175"
         }
     },
     CRIMSON: {
-        desc: "Exterior Hand Wash",
+        desc: "Exterior Detail",
         features: [
-            "Two bucket hand wash",
+            "3 bucket hand wash",
             "Wheel & tire cleaning",
             "Hand dry",
             "Tire dressing"
@@ -38,9 +38,37 @@ export const PACKAGES_DATA = {
             "Discounted price"
         ],
         prices: {
-            "S": "$150",
-            "M": "$175",
-            "L": "$200"
+            "S": "$175",
+            "M": "$200",
+            "L": "$225"
         }
     }
+}
+
+export const ADDONS_DATA = {
+    "Seat shampoo": {
+        type: "Interior",
+        price: 30,
+        desc: "Shampoo and hot water extraction for fabric seats."
+    },
+    "Carpet shampoo": {
+        type: "Interior",
+        price: 30,
+        desc: "Shampoo and hot water extraction for all carpet."
+    },
+    "Leather conditioning": {
+        type: "Interior",
+        price: 15,
+        desc: "Revitalizes and preserves leather surfaces."
+    },
+    "Odor elimination": {
+        type: "Interior",
+        price: 30,
+        desc: "Ozone odor elimination for smelly interiors."
+    },
+    "Paint sealant": {
+        type: "Exterior",
+        price: 20,
+        desc: "Enhanced protection & water repellence for up to 60 days."
+    },
 }

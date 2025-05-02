@@ -21,6 +21,8 @@ export default function MessageForm () {
     const ozoneField = useRef();
     const carpetShampooField = useRef();
     const seatShampooField = useRef();
+    const leatherConditioningField = useRef();
+    const sealantField = useRef();
 
     const petHairField = useRef();
     const stainingField = useRef();
@@ -59,7 +61,7 @@ export default function MessageForm () {
                 "seat_material": seatField.current.value,
                 "last_detail": lastDetailField.current.value,
                 "desired_package": [whiteField, crimsonField, blackField].filter(ref => ref.current.checked == true)[0].current.value,
-                "add_ons": [ozoneField, carpetShampooField, seatShampooField].filter(ref => ref.current.checked == true).map(ref => ref.current.value),
+                "add_ons": [ozoneField, carpetShampooField, seatShampooField, sealantField, leatherConditioningField].filter(ref => ref.current.checked == true).map(ref => ref.current.value),
                 "vehicle_state": [petHairField, stainingField, dirtyField].filter(ref => ref.current.checked == true).map(ref => ref.current.value),
                 "method": [textMe, callMe].filter(ref => ref.current.checked == true)[0].current.value,
                 "message": msgField.current.value
@@ -87,6 +89,8 @@ export default function MessageForm () {
                 ozoneField.current.checked = false;
                 carpetShampooField.current.checked = false;
                 seatShampooField.current.checked = false;
+                leatherConditioningField.current.checked = false;
+                sealantField.current.checked = false;
 
                 petHairField.current.checked = false;
                 stainingField.current.checked = false;
@@ -187,13 +191,13 @@ export default function MessageForm () {
                 <legend className="ml-2 px-2 mb-0">Add-ons:</legend>
                 <div className="flex gap-2">
                     <input
-                        ref={ozoneField}
+                        ref={seatShampooField}
                         type="checkbox"
-                        id="ozone"
+                        id="seat-shampoo"
                         name="add-ons"
-                        value="ozone" 
+                        value="seat-shampoo"
                     />
-                    <label htmlFor="ozone">Ozone odor elimination ($25)</label>
+                    <label htmlFor="seat-shampoo">Seat shampoo ($30)</label>
                 </div>
                 <div className="flex gap-2">
                     <input
@@ -203,17 +207,37 @@ export default function MessageForm () {
                         name="add-ons"
                         value="carpet-shampoo" 
                     />
-                    <label htmlFor="carpet-shampoo">Carpet shampoo ($25)</label>
+                    <label htmlFor="carpet-shampoo">Carpet shampoo ($30)</label>
                 </div>
                 <div className="flex gap-2">
                     <input
-                        ref={seatShampooField}
+                        ref={leatherConditioningField}
                         type="checkbox"
-                        id="seat-shampoo"
+                        id="leather-conditioning"
                         name="add-ons"
-                        value="seat-shampoo"
+                        value="leather-conditioning"
                     />
-                    <label htmlFor="seat-shampoo">Seat shampoo ($25)</label>
+                    <label htmlFor="leather-conditioning">Leather conditioning ($15)</label>
+                </div>
+                <div className="flex gap-2">
+                    <input
+                        ref={ozoneField}
+                        type="checkbox"
+                        id="ozone"
+                        name="add-ons"
+                        value="ozone" 
+                    />
+                    <label htmlFor="ozone">Odor elimination ($30)</label>
+                </div>
+                <div className="flex gap-2">
+                    <input
+                        ref={sealantField}
+                        type="checkbox"
+                        id="sealant"
+                        name="add-ons"
+                        value="sealant" 
+                    />
+                    <label htmlFor="sealant">Paint sealant ($20)</label>
                 </div>
             </fieldset>
 

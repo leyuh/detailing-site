@@ -7,6 +7,8 @@ import PortfolioItem from "@/components/PortfolioItem";
 import Link from "next/link";
 import PackageDiv from "@/components/PackageDiv";
 
+import { ADDONS_DATA } from "@/pricingModule";
+
 const featuredPortfolioItems = [1, 2, 3, 4, 5];
 
 export default function Home() {
@@ -73,7 +75,7 @@ export default function Home() {
 
         <div className="w-full text-zinc-50 z-30 relative">
 
-          <div className="bg-zinc-400 absolute w-full h-[80%] md:h-[65%]">
+          <div className="bg-zinc-400 absolute w-full h-[70%] md:h-[65%]">
             <Image 
               src="/cleaning/controls.jpeg"
               alt="interior"
@@ -99,21 +101,38 @@ export default function Home() {
               />
           </div>
 
-          <h1 className="font-[600] text-2xl text-center z-20 mt-4 pb-2">ADD-ONS</h1>
-          <ul className="text-center max-w-sm px-2 mx-auto text-lg pb-2">
-            <li className="flex justify-between mx-6">
-              <p>Carpet shampooing:</p>
-              <p className="font-[800]">$25</p>
-            </li>
-            <li className="flex justify-between mx-6">
-              <p>Seat shampooing:</p>
-              <p className="font-[800]">$25</p>
-            </li>
-            <li className="flex justify-between mx-6">
-              <p>Ozone odor elimination:</p>
-              <p className="font-[800]">$25</p>
-            </li>
-          </ul>
+          <div className="relative w-full top-8">
+            <h1 className="font-[600] text-3xl text-center z-20 mt-20 pb-2">ADD-ONS</h1>
+            <div className="flex flex-col pb-6 md:flex-row md:gap-12 w-full px-12 md:px-0 md:w-[80%] lg:w-[60%] mx-auto justify-center">
+              <div className="flex-grow">
+                <h2 className="text-2xl text-center">INTERIOR</h2>
+                <ul className="">
+                  {Object.keys(ADDONS_DATA).filter((item, i) => ADDONS_DATA[item].type == "Interior").map((item, i) => <li className="my-2">
+                    <span className="flex text-lg font-[600] justify-between">
+                      <h3>{item}</h3>
+                      <h3 className="">${ADDONS_DATA[item].price}</h3>
+                    </span>
+                    <p className="ml-2">{ADDONS_DATA[item].desc}</p>
+                  </li>)}
+                </ul> 
+              </div>
+              
+              <div className="flex-grow">
+                <h2 className="text-2xl text-center">EXTERIOR</h2>
+                <ul className="">
+                  {Object.keys(ADDONS_DATA).filter((item, i) => ADDONS_DATA[item].type == "Exterior").map((item, i) => <li className="my-2">
+                    <span className="flex text-lg font-[600] justify-between">
+                      <h3>{item}</h3>
+                      <h3>${ADDONS_DATA[item].price}</h3>
+                    </span>
+                    <p className="ml-2">{ADDONS_DATA[item].desc}</p>
+                  </li>)}
+                </ul>
+              </div>
+              
+            </div>
+          </div>
+          
         </div>
       </div>}
 
