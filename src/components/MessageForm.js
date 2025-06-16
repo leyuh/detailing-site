@@ -2,8 +2,12 @@
 import { useRef, useState } from "react"
 import emailjs from "@emailjs/browser";
 import useStickyState from "@/useStickyState";
+import { useRouter } from "next/navigation";
 
 export default function MessageForm () {
+
+    const router = useRouter();
+
     const form = useRef();
 
     const nameField = useRef();
@@ -23,6 +27,7 @@ export default function MessageForm () {
     const seatShampooField = useRef();
     const leatherConditioningField = useRef();
     const sealantField = useRef();
+    const decontamField = useRef();
 
     const petHairField = useRef();
     const stainingField = useRef();
@@ -61,7 +66,7 @@ export default function MessageForm () {
                 "seat_material": seatField.current.value,
                 "last_detail": lastDetailField.current.value,
                 "desired_package": [whiteField, crimsonField, blackField].filter(ref => ref.current.checked == true)[0].current.value,
-                "add_ons": [ozoneField, carpetShampooField, seatShampooField, sealantField, leatherConditioningField].filter(ref => ref.current.checked == true).map(ref => ref.current.value),
+                "add_ons": [ozoneField, carpetShampooField, seatShampooField, sealantField, leatherConditioningField, decontamField].filter(ref => ref.current.checked == true).map(ref => ref.current.value),
                 "vehicle_state": [petHairField, stainingField, dirtyField].filter(ref => ref.current.checked == true).map(ref => ref.current.value),
                 "method": [textMe, callMe].filter(ref => ref.current.checked == true)[0].current.value,
                 "message": msgField.current.value
@@ -91,6 +96,7 @@ export default function MessageForm () {
                 seatShampooField.current.checked = false;
                 leatherConditioningField.current.checked = false;
                 sealantField.current.checked = false;
+                decontamField.current.checked = false;
 
                 petHairField.current.checked = false;
                 stainingField.current.checked = false;
@@ -98,6 +104,8 @@ export default function MessageForm () {
 
                 textMe.current.checked = false;
                 callMe.current.checked = false;
+
+                router.push('/success');
 
                 return false;
             }, (error) => {
@@ -238,6 +246,16 @@ export default function MessageForm () {
                         value="sealant" 
                     />
                     <label htmlFor="sealant">Paint sealant ($20)</label>
+                </div>
+                <div className="flex gap-2">
+                    <input
+                        ref={decontamField}
+                        type="checkbox"
+                        id="decontam"
+                        name="add-ons"
+                        value="decontam" 
+                    />
+                    <label htmlFor="decontam">Paint decontamination ($20)</label>
                 </div>
             </fieldset>
 

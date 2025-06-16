@@ -69,6 +69,11 @@ export const ADDONS_DATA = {
     "Paint sealant": {
         type: "Exterior",
         price: 20,
-        desc: "Enhanced protection & water repellence for up to 60 days."
+        desc: "Enhanced shine, protection, & water repellence for up to 60 days."
+    },
+    "Decontamination": {
+        type: "Exterior",
+        price: 20,
+        desc: "Iron removal & clay bar treatment for heavily soiled vehicles."
     },
 }
