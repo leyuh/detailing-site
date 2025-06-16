@@ -4,6 +4,8 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+import { GoogleTagManager } from '@next/third-parties/google'
+
 const font = Quicksand({ subsets: ["latin"], weight: ['300', '400', '600'], display: "swap" });
 
 export const metadata = {
@@ -19,6 +21,7 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
       </body>
+      <GoogleTagManager gtmId="GTM-M769TMLJ" />
     </html>
   );
 }
