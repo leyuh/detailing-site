@@ -13,7 +13,7 @@ const font = Quicksand({ subsets: ["latin"], weight: ['300', '400', '600'], disp
 
 export const metadata = {
   title: "Devlin Auto Detail",
-  description: "Excellent interior vehicle detailing in Brownsville, Oregon."
+  description: "Brownsville, Oregon - Excellent Auto Detailing - Book Yours Today!"
 };
 
 export default function RootLayout({ children }) {
