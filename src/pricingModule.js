@@ -26,7 +26,8 @@ export const PACKAGES_DATA = {
             "3 bucket hand wash",
             "Wheel & tire cleaning",
             "Hand dry",
-            "Tire dressing"
+            "No-sling tire dressing",
+            "Paint sealant (lasts up to 60 days)"
         ],
         price: "$60"
     },
@@ -66,14 +67,14 @@ export const ADDONS_DATA = {
         price: 30,
         desc: "Ozone odor elimination for smelly interiors."
     },
-    "Paint sealant": {
-        type: "Exterior",
-        price: 20,
-        desc: "Enhanced shine, protection, & water repellence for up to 60 days."
-    },
     "Decontamination": {
         type: "Exterior",
         price: 20,
         desc: "Iron removal & clay bar treatment for heavily soiled vehicles."
+    },
+    "Engine bay cleaning": {
+        type: "Exterior",
+        price: 30,
+        desc: "Basic cleaning of components under the hood."
     },
 }

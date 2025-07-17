@@ -60,10 +60,10 @@ export default function Home() {
           </div>
           <div className="hidden md:flex relative w-[60%] px-2 my-12 items-center justify-center rounded-sm overflow-hidden">
               <Image 
-                src="/portfolio-items/item-11/after-3.png"
+                src="/mustang.png"
                 alt="image"
                 fill={true}
-                className="object-cover brightness-[105%] contrast-[105%] saturation-[90%] rounded-sm object-center p-2"
+                className="object-contain brightness-[105%] contrast-[105%] saturation-[90%] rounded-sm object-center p-2"
               />
           </div>
         </div>
