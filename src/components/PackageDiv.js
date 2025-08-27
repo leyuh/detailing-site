@@ -18,8 +18,8 @@ export default function PackageDiv ({ name }) {
             ))}
         </ul>
 
-        {(PACKAGES_DATA[name].optional && <div className="relative text-[15px] flex pb-32 mt-2 w-full">
-            <span><span className="font-bold whitespace-nowrap">* Optional:</span> {` ${PACKAGES_DATA[name].optional} (see below)`}</span>
+        {(<div className="relative text-[15px] flex pb-32 mt-2 w-full">
+            {PACKAGES_DATA[name].optional && <span><span className="font-bold whitespace-nowrap">* Optional:</span> {` ${PACKAGES_DATA[name].optional} (see below)`}</span>}
         </div>)}
 
         <div className="left-0 mx-auto w-full absolute bottom-4">
