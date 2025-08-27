@@ -245,7 +245,7 @@ export default function MessageForm () {
                         name="add-ons"
                         value="decontam" 
                     />
-                    <label htmlFor="decontam">Paint decontamination ($20)</label>
+                    <label htmlFor="decontam">Paint decontamination ($40)</label>
                 </div>
                 <div className="flex gap-2">
                     <input
@@ -255,7 +255,7 @@ export default function MessageForm () {
                         name="add-ons"
                         value="engine" 
                     />
-                    <label htmlFor="engine">Engine bay cleaning ($30)</label>
+                    <label htmlFor="engine">Engine bay cleaning ($25)</label>
                 </div>
             </fieldset>
 

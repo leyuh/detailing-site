@@ -9,7 +9,7 @@ export default function PackageDiv ({ name }) {
         <p className="text-center text-lg -mt-2 my-2 font-[400]">{PACKAGES_DATA[name].desc}</p>
         <hr className="w-[90%] mx-auto" />
 
-        <ul className="m-4 text-lg font-[400] pb-28">
+        <ul className="m-4 text-lg font-[400] -pb-2">
             {PACKAGES_DATA[name].features.map((val, i) => (
                 <li className="flex shrink-0 gap-2" key={i}>
                     <div className="mt-1"><Check dimensions="size-5" className="inline-block shrink-0" /></div>
@@ -18,14 +18,18 @@ export default function PackageDiv ({ name }) {
             ))}
         </ul>
 
+        {(PACKAGES_DATA[name].optional && <div className="relative text-[15px] flex pb-32 mt-2 w-full">
+            <span><span className="font-bold whitespace-nowrap">* Optional:</span> {` ${PACKAGES_DATA[name].optional} (see below)`}</span>
+        </div>)}
+
         <div className="left-0 mx-auto w-full absolute bottom-4">
-            {(name != "CRIMSON") ? (<>
-                <h3 className="w-full text-center"><i>Starting at</i></h3>
-                <div className="flex flex-row gap-6 justify-center">
+            {(true) ? (<>
+                {(name != "CRIMSON") ? <h3 className="w-full text-center"><i>Starting at</i></h3> : <></>}
+                <div className="flex flex-row gap-6 justify-center relative px-2">
                     {Object.keys(PACKAGES_DATA[name].prices).map((type, i) => (
                         <div className="flex flex-col text-center" key={i}>
                             <p className="text-2xl font-bold">{PACKAGES_DATA[name].prices[type]}</p>
-                            <p className="text-sm -mt-[4px]">{type}</p>
+                            <p className="text-sm -mt-[4px] whitespace-pre leading-snug w-full">{type}</p>
                         </div>
                     ))}
                 </div>

@@ -12,36 +12,43 @@ export const PACKAGES_DATA = {
             "Plastics, vinyl, & leather cleaning",
             "Steam cleaning",
             "Interior glass cleaning",
-            "Door jamb cleaning"
+            "Basic door jamb cleaning"
         ],
         prices: {
-            "S": "$125",
-            "M": "$150",
-            "L": "$175"
-        }
+            "S": "$120",
+            "M": "$160",
+            "L": "$200"
+        },
+        optional: "Shampooing, leather conditioning, odor removal"
     },
     CRIMSON: {
         desc: "Exterior Detail",
         features: [
-            "3 bucket hand wash",
+            "2 bucket hand wash",
             "Wheel & tire cleaning",
+            "Minor bug & grime removal",
             "Hand dry",
             "No-sling tire dressing",
-            "Paint sealant (lasts up to 60 days)"
+            "3 month paint sealant"
         ],
-        price: "$60"
+        prices: {
+            "Sedan": "$60",
+            "SUV, Truck": "$80"
+        },
+        optional: "Paint decontamination, engine bay cleaning"
     },
     BLACK: {
         desc: "Full Detail",
         features: [
             "All White features",
             "All Crimson features",
+            "Thorough door jamb cleaning",
             "Discounted price"
         ],
         prices: {
-            "S": "$175",
-            "M": "$200",
-            "L": "$225"
+            "S": "$170",
+            "M": "$220",
+            "L": "$260"
         }
     }
 }
@@ -69,12 +76,12 @@ export const ADDONS_DATA = {
     },
     "Decontamination": {
         type: "Exterior",
-        price: 20,
-        desc: "Iron removal & clay bar treatment for heavily soiled vehicles."
+        price: 40,
+        desc: "Iron removal, tree & road fallout removal, & clay bar treatment for heavily soiled vehicles."
     },
     "Engine bay cleaning": {
         type: "Exterior",
-        price: 30,
+        price: 25,
         desc: "Basic cleaning of components under the hood."
     },
 }
